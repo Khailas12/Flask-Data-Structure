@@ -51,12 +51,4 @@ for i in range(200):
     db.session.add(new_blog_post)
     db.session.commit()
     
-    
 print("Done")
-
-
-    
-    
-        
-        
-        
