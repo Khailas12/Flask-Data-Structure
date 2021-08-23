@@ -14,7 +14,6 @@ app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///server1.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = 0
 
-
 @event.listens_for(Engine, "connect")
 def _set_sqlite_pragma(dbapi_connection, connection_record):
     if isinstance(dbapi_connection, SQLite3Connection):
@@ -27,7 +26,6 @@ db =  SQLAlchemy(app)
 now = datetime.now()
 
 faker = Faker()
-
 
 for i in range(200):
     name = faker.name()
