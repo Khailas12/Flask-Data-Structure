@@ -1,7 +1,6 @@
 # https://www.youtube.com/watch?v=74NW-84BqbA&list=PLH4izthU8rXTbSRVJZvAJZojarwVfjQhA
 # from 02:06:02 onwards
 
-
 class Node:
     def __init__(self, data=None):
         self.data = data
