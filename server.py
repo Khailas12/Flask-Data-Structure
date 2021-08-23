@@ -13,7 +13,6 @@ import random
 import stack
 
 
-
 app = Flask(__name__)
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///server1.db"
@@ -28,7 +27,6 @@ def _set_sqlite_pragma(dbapi_connection, connection_record):
         cursor.execute("PRAGMA foreign_keys=ON;")
         cursor.close()
 
-
 db = SQLAlchemy(app)
 now = datetime.now()
 
@@ -40,8 +38,10 @@ class User(db.Model):    # models
     email = db.Column(db.String(20))
     address = db.Column(db.String(50))
     phone = db.Column(db.String(20))
-    posts = db.relationship("BlogPost", cascade="all, delete")   # cascade code -> whenever deleting a user, any item in this blog post table that represents that user will also be deleted
-    # This refers to how operations performed on a “parent” object relative to a particular Session should be propagated to items referred to by that relationship (e.g. “child” objects), and is affected by the relationship. this reflects accordigly ever since
+    posts = db.relationship("BlogPost", cascade="all, delete")   # cascade code -> whenever deleting a user, any item in this blog post table that represents that 
+    #user will also be deleted
+    # This refers to how operations performed on a “parent” object relative to a particular Session should be propagated to items referred to by that relationship 
+    # (e.g. “child” objects), and is affected by the relationship. this reflects accordigly ever since
 
 class BlogPost(db.Model):
     __tablename__ = "blog_post"
