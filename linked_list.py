@@ -1,11 +1,11 @@
+# https://www.youtube.com/watch?v=74NW-84BqbA&list=PLH4izthU8rXTbSRVJZvAJZojarwVfjQhA
+# from 42:00
+
 class Node:
     def __init__(self, data=None, next_node=None):
         self.data = data
         self.next_node = next_node
-
-
-# https://www.youtube.com/watch?v=74NW-84BqbA&list=PLH4izthU8rXTbSRVJZvAJZojarwVfjQhA
-# from 42:00
+        
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -39,7 +39,7 @@ class LinkedList:
 # node3 = Node("data3", node4)
 # node2 = Node("data2", node3)
 # node1 = Node("data1", node2)
-# O/P =  data1 -> data2 -> data3 -> data4 -> None
+# O/P=  data1 -> data2 -> data3 -> data4 -> None
 
     def insert_begining(self, data):
         if self.head is None:
@@ -52,7 +52,7 @@ class LinkedList:
 # linked_list.insert_begining("data")
 # linked_list.insert_begining("not data")
 # linked_list.print_linked_list()
-# O/P =>  not data => data => None
+# O/P=  not data => data => None
 
     def insert_at_end(self, data):
         if self.head is None:
