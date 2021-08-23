@@ -21,7 +21,6 @@ def _set_sqlite_pragma(dbapi_connection, connection_record):
         cursor.execute("PRAGMA foreign_keys=ON;")
         cursor.close()
         
-    
 db =  SQLAlchemy(app)
 now = datetime.now()
 
